@@ -1,0 +1,227 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor01: #A6E4FF;
+    --cor02: #59CDFF; /* COLOR MAIN */
+    --cor03: #47A4CC;
+    --cor04: #537280;
+    --cor05: #2D6780;
+    --font-default: 'Poppins', sans-serif; /* FONT MAIN */
+}
+
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-default);
+    font-size: 1.2rem;
+    background-color: var(--cor02);
+}
+
+header .logobike {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+header .logobike > img {
+    width: 400px;
+}
+
+nav .list-nav {
+    display: flex;
+    list-style: none; 
+    justify-content: center;
+}
+
+li > a {
+    display: block;
+    text-decoration: none;
+    margin: 30px 30px 10px 30px ;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #193846;
+}
+
+li > a:hover {
+    background-color: var(--cor01);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main .container {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    max-width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+main .bikemake {
+    
+    text-align: justify;
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 10px 0px 0px 10px;
+    position: relative;
+}
+
+main .bikemake .detail {
+    background-color: red;
+    height: 4px;
+    width: 60px;
+    position: absolute;
+    right: -30px;
+    top: 20px;  
+}
+
+main .bikemake h2 {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+main .bikemake h2::before {
+    content: '';
+    background-color: red;
+    height: 4px;
+    width: 30px;
+    position: absolute;
+    bottom: 5px;
+}
+
+main .bikemake p {
+    margin-bottom: 20px;
+}
+
+main .bikemake a {
+    text-decoration: none;
+    background-color: var(--cor03);
+    padding: 10px 20px;
+    border-radius: 4px;     
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+main .bikemake a:hover {
+    background-color: var(--cor04);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+main .bikeimg > img {
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    border-radius: 0px 12px 0px 0px;
+    box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.418);
+}
+
+main .bikevantagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 3rem;
+}
+
+main .bikevantagens h2 {
+    text-align: right;
+    padding-right: 50px;
+    color: #6b686896;
+    position: relative;
+}
+
+main .bikevantagens h2::before {
+    content: '';
+    background-color: red;
+    height: 4px;
+    width: 290px;
+    position: absolute;
+    bottom: -10px;
+    left: 105px;
+}
+
+main .bikedescription {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 0px 0px 12px 0px;
+    box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.418);
+}
+
+main .bikedescription .bikedescription-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin:20px 0px 20px 0px;
+    gap: 10px 20px;
+    
+}
+
+main .bikedescription img {
+    display: block;
+    margin-top: 5px;
+    
+}
+
+main .bikedescription h3 {
+    grid-column: 2/3;
+}
+
+main .bikedescription p {
+    grid-column: 2/3;
+}
+
+
+footer p {
+    text-align: center;
+    background-color: var(--cor03);
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.301);
+    padding: 20px;
+}
+
+/* animation */
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+  .tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
