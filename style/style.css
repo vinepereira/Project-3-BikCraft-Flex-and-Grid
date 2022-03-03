@@ -62,10 +62,10 @@ main {
 
 main .container {
     display: grid;
-    grid-template-columns: 450px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 332px 1fr;
     max-width: 900px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 50px 50px 50px;
     
 }
 
@@ -123,12 +123,15 @@ main .bikemake a:hover {
 }
 
 main .bikeimg > img {
-    width: 100%;
+    max-width: 100%;
     display: flex;
+    flex-direction: column;
+    height: 100%;
     object-fit: cover;
     border-radius: 0px 12px 0px 0px;
     box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.418);
 }
+
 
 main .bikevantagens {
     display: flex;
