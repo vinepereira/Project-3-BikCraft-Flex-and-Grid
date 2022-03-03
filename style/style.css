@@ -63,14 +63,14 @@ main {
 main .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 332px 1fr;
+    grid-template-rows: 332px auto;
     max-width: 900px;
-    margin: 50px 50px 50px 50px;
+    margin: 50px;
     
 }
 
 main .bikemake {
-    
+    width: 100%;
     text-align: right;
     background-color: white;
     padding: 30px 40px;
@@ -228,4 +228,116 @@ footer p {
   .tracking-in-expand {
 	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: tracking-in-expand 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@media (max-width: 945px) {
+    main .container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        max-width: 700px;
+        
+    }
+
+    main .bikemake .detail {
+        display: none;
+    }
+
+    main .bikemake {
+        text-align: center;
+        border-radius: 14px;
+        margin-bottom: 40px;
+        box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.322);
+    }
+    
+    main .bikemake a {
+        text-decoration: none;
+        background-color: var(--cor03);
+        padding: 10px 20px;
+        border-radius: 4px;     
+        position: unset;
+        right: 40px;
+        cursor: pointer;
+        color: white;
+    }
+    main .bikeimg {
+        margin-bottom: 40px;
+    }
+
+    main .bikeimg > img {
+        border-radius: 14px;   
+    }
+
+    main .bikevantagens {
+        margin-bottom: 40px;
+    }
+    main .bikevantagens h2 {
+        text-align: center;
+        padding-right: 0px;
+        color: #6b686896;
+        position: relative;
+        font-size: 3rem;
+    }
+
+    main .bikedescription {
+        border-radius:14px;
+    }
+    
+
+}
+
+@media (max-width: 662px) {
+
+    nav {
+        
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        
+    }
+
+    nav .list-nav {
+        display: flex;
+        list-style: none; 
+        justify-content: left;
+        
+
+            
+    }
+
+    li {
+        
+        margin: 10px;
+    }
+
+    li > a {
+        display: block;
+        text-decoration: none;
+        margin: 0px;
+        background-color: white;
+        /* padding: 10px 20px; */
+        
+        border-radius: 4px;
+        color: #193846;
+        
+    }
+
+    main .bikevantagens h2 {
+        text-align: center;
+        padding-right: 0px;
+        color: #6b686896;
+        position: relative;
+        font-size: 2rem;
+    }
+
+    main .bikevantagens h2::before {
+        position: absolute;
+        bottom: -1px;
+        left: 110px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 532px) {
+    
 }
