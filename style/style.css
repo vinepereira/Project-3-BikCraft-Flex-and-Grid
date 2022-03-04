@@ -330,11 +330,15 @@ footer p {
         font-size: 2rem;
     }
 
-    main .bikevantagens h2::before {
+    main .bikemake h2::before {
+        content: '';
+        background-color: red;
+        height: 4px;
+        width: 50%;
         position: absolute;
-        bottom: -1px;
-        left: 110px;
-        width: 150px;
+        bottom: 1px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
